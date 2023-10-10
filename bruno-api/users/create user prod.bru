@@ -1,0 +1,17 @@
+meta {
+  name: create user prod
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/users
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "user_name": "sigerolem"
+  }
+}
