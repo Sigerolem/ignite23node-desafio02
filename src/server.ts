@@ -21,3 +21,5 @@ const port = process.env.PORT
 app.listen({
   port: parseInt(port ?? '10000')
 })
+
+console.log(`Listening on port ${port}`)
