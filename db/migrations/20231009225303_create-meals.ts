@@ -5,7 +5,6 @@ export async function up(knex: Knex): Promise<void> {
   await knex.schema.createTable('meals', (table) => {
     table.uuid('id').primary()
     table.uuid('user_id').notNullable()
-    table.foreign('id').references('user_id').inTable('users').onDelete('CASCADE').onUpdate('CASCADE')
     table.string('name').notNullable()
     table.text('description')
     table.boolean('is_diet_meal').notNullable()
