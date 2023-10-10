@@ -1,0 +1,24 @@
+meta {
+  name: post meal
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/meals
+  body: json
+  auth: none
+}
+
+headers {
+  Cookie: {{cookie}}
+}
+
+body:json {
+  {
+    "name": "xis salada",
+    "description": "muito bom",
+    "meal_had_at": "2023-10-10 12:00:10",
+    "is_diet_meal": true
+  }
+}

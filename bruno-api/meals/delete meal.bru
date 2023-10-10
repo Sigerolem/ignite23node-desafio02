@@ -1,0 +1,24 @@
+meta {
+  name: delete meal
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{baseUrl}}/meals/bbc474db-4629-454c-91c5-2fe63d2c502c
+  body: none
+  auth: none
+}
+
+headers {
+  Cookie: {{cookie}}
+}
+
+body:json {
+  {
+    "name": "xis",
+    "description": "muito bom",
+    "meal_had_at": "2023-10-10 12:00:10",
+    "is_diet_meal": true
+  }
+}

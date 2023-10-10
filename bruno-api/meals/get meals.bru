@@ -1,0 +1,21 @@
+meta {
+  name: get meals
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/meals
+  body: none
+  auth: none
+}
+
+headers {
+  Cookie: {{cookie}}
+}
+
+body:json {
+  {
+    "user_name": "siger"
+  }
+}
